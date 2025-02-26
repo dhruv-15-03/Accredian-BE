@@ -1,8 +1,9 @@
-const express = require("express");
-const { createReferral } = require("../controllers/referralController");
+import express from "express";
+import { createReferral } from "../controllers/referralController.js"; // Ensure correct path
 
 const router = express.Router();
 
 router.post("/", createReferral);
 
-module.exports = router;
+export default router; // Export using ES Module syntax
+
