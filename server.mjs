@@ -8,6 +8,13 @@ const app = express();
 
 // Middleware
 app.use(cors());
+app.use(
+    cors({
+      origin: ["http://localhost:3000/*","https://accredian-fe.vercel.app/*"], // Allow only your frontend
+      methods: "GET,POST,PUT,DELETE",
+      credentials: true, // Allow cookies if needed
+    })
+  );
 app.use(express.json());
 
 // Routes
