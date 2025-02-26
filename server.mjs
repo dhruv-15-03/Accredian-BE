@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import referralRoutes from "./src/routes/referralRoutes.js"; // Ensure correct path
+import referralRoutes from "./src/routes/referralRoutes"; // Ensure correct path
 
 dotenv.config();
 const app = express();
